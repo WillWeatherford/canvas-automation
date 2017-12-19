@@ -6,7 +6,7 @@ import random
 from itertools import chain
 from collections import namedtuple
 from importlib import import_module
-# from inspect import isgenerator
+from inspect import isgenerator
 
 
 from cases import STR_EDGE_CASES
@@ -91,8 +91,7 @@ TEST_CASES = ((sequence, start) for sequence in TEST_CASES
 @pytest.fixture
 def empty_trie_tree():
     """Empty trie tree fixture."""
-    from trie import TrieTree
-    return TrieTree()
+    return ClassDef()
 
 
 @pytest.fixture(scope='function', params=TEST_CASES)
